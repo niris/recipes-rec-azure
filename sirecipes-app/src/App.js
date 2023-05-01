@@ -1,28 +1,50 @@
 import { useState } from "react";
 import "./App.css";
-
-function IngredientList({ ingredients }) {
-  return (
-    <>
-      {ingredients.length > 0 ? (
-        <ul>
-          {ingredients.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      ) : null}
-    </>
-  );
-}
+import Navbar from "./Nav";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [ingredientValue, setIngredientValue] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [result, setResult] = useState(null);
 
+  function IngredientList({ ingredients }) {
+    return (
+      <>
+        {ingredients.length > 0 ? (
+          <p>
+            {ingredients.map((item, index) => (
+              <span className="tag" key={index}>
+                {item}{" "}
+                <button
+                  className="button icon-only"
+                  onClick={() => {
+                    ingredients.splice(index, 1);
+                    console.log(ingredients);
+                    setIngredients([...ingredients]);
+                  }}
+                >
+                  &times;
+                </button>
+              </span>
+            ))}
+          </p>
+        ) : null}
+      </>
+    );
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
 
+    if (ingredientValue.trim() === "") {
+      return;
+    }
+    setIngredients([...ingredients, ingredientValue.trim()]);
+    setIngredientValue("");
+  }
+
+  function handleSearchRecipes() {
     // Send the request to the API
     fetch("/api/recommendations", {
       method: "POST",
@@ -44,36 +66,42 @@ function App() {
     setIngredients([]);
   }
 
-  function handleAddIngredient() {
-    if (ingredientValue.trim() === "") {
-      return;
-    }
-    setIngredients([...ingredients, ingredientValue.trim()]);
-    setIngredientValue("");
-  }
-
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
-        <div className="input-group">
+        <div className="row">
           <input
-            type="text"
+            type="search"
             name="ingredients"
             value={ingredientValue}
             onChange={(e) => setIngredientValue(e.target.value)}
             placeholder="add ingredient"
+            className="col"
           />
-          <button type="button" onClick={handleAddIngredient}>
-            <i className="material-icons">add</i>
+          <button
+            type="submit"
+            className="col-1 button primary outline icon-only"
+          >
+            +
           </button>
         </div>
         <IngredientList ingredients={ingredients} />
-        <button type="submit">Submit</button>
+        <button
+          type="button"
+          onClick={handleSearchRecipes}
+          className="button primary"
+        >
+          Search
+        </button>
       </form>
       {result ? (
         <div className="result">
-          <h1>Recommended recipe:</h1>
-          <p>{result.title}</p>
+          <h1>Recommended recipes</h1>
+          <ul>
+            {result.map((item, index) => (
+              <li>{item.Name}</li>
+            ))}
+          </ul>
         </div>
       ) : null}
     </div>

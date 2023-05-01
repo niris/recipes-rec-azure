@@ -7,6 +7,7 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
+    "mssql": "^9.1.1",
     "nvm": "^0.0.4"
   }
 }
