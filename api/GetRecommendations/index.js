@@ -18,8 +18,7 @@ module.exports = async function (context, req) {
     // TODO: Implement recipe generation logic based on the list of ingredients
     console.log("try to connect to DB")
     try {
-      await sql.connect(process.env.AzureSQLConnection)
-
+      await sql.connect(process.env["AzureSQLConnectionString"])
       const result = await sql.query('SELECT * FROM recipes.Recipes');
       const res = result.recordset; 
       await sql.close();
