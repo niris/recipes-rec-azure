@@ -1,7 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import Navbar from "./Nav";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [ingredientValue, setIngredientValue] = useState("");
