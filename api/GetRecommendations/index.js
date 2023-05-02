@@ -2,7 +2,7 @@ const sql = require('mssql');
 
 module.exports = async function (context, req) {
   const ingredients = req.body.ingredients;
-  console.log("ingredients ", ingredients)
+  console.log("ingredients ", ingredients);
   
   const recipe = await generateRecipe(ingredients);
   context.res = {
@@ -18,7 +18,8 @@ module.exports = async function (context, req) {
     // TODO: Implement recipe generation logic based on the list of ingredients
     console.log("try to connect to DB")
     try {
-      await sql.connect(process.env["AzureSQLConnectionString"])
+      //await sql.connect(process.env["AzureSQLConnectionString"]);
+      await sql.connect("Driver={ODBC Driver 18 for SQL Server};Server=tcp:sircloud.database.windows.net,1433;Database=recipes;Uid=cloudadmin;Pwd={RockmyRoot31!};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;");
       const result = await sql.query('SELECT * FROM recipes.Recipes');
       const res = result.recordset; 
       await sql.close();
@@ -29,14 +30,5 @@ module.exports = async function (context, req) {
     }
   }
   
-
-
-  /* const recipe = {
-      title: "Example Recipe",
-      ingredients,
-      instructions: "Example instructions",
-    };
-    return recipe;
-    */
   
 

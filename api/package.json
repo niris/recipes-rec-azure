@@ -4,10 +4,13 @@
   "description": "",
   "scripts": {
     "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "test": "jest"
   },
   "dependencies": {
     "mssql": "^9.1.1",
     "nvm": "^0.0.4"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
