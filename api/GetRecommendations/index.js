@@ -28,6 +28,3 @@ module.exports = async function (context, req) {
       throw new Error('Error connecting to database');
     }
   }
-  
-  
-
