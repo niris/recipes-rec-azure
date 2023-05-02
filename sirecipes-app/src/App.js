@@ -18,7 +18,7 @@ function App() {
                   className="button icon-only"
                   onClick={() => {
                     ingredients.splice(index, 1);
-                    console.log(ingredients);
+                    console.log("ingredientList ", ingredients);
                     setIngredients([...ingredients]);
                   }}
                 >
@@ -44,24 +44,25 @@ function App() {
 
   function handleSearchRecipes() {
     // Send the request to the API
-    fetch("/api/recommendations", {
-      method: "POST",
-      body: JSON.stringify({
-        ingredients,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Response:", data);
-        setResult(data);
+    if (ingredients.length > 0) {
+      fetch("/api/recommendations", {
+        method: "POST",
+        body: JSON.stringify({
+          ingredients,
+        }),
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Response:", data);
+          setResult(data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
     // Clear the input and reset the ingredient list
-    setIngredientValue("");
-    setIngredients([]);
+    //setIngredientValue("");
+    //setIngredients([]);
   }
 
   return (
@@ -91,8 +92,11 @@ function App() {
         >
           Search
         </button>
+        <button type="reset" onClick={() => setIngredients([])}>
+          Reset
+        </button>
       </form>
-      {result ? (
+      {result && result.length > 0 ? (
         <div className="result">
           <h1>Recommended recipes</h1>
           <ul>

@@ -4,3 +4,7 @@
   max-width: 800px;
 } 
 .tag{border-radius: .5em;}
+
+button{
+  margin-right: 0.5em;
+}
