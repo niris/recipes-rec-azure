@@ -101,7 +101,7 @@ function App() {
           <h1>Recommended recipes</h1>
           <ul>
             {result.map((item, index) => (
-              <li>{item.Name}</li>
+              <li key={index}>{item.Name}</li>
             ))}
           </ul>
         </div>
