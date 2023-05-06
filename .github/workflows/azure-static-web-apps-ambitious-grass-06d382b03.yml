@@ -3,13 +3,13 @@ name: Azure Static Web Apps CI/CD
 on:
   push:
     branches:
-      - main
+      - af
     paths:
       - 'sirecipes-app/**'
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - main
+      - af
 
 jobs:
   build_and_deploy_job:
