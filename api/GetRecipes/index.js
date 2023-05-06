@@ -3,7 +3,7 @@ const sql = require("mssql");
 module.exports = async function (context, req) {
   try {
     await sql.connect(process.env["AZURESQLCONNECTION"]);
-    const result = await sql.query("SELECT * FROM recipes");
+    const result = await sql.query("SELECT * FROM Recipes.Recipes");
     context.res = {
       status: 200,
       body: result.recordset,
