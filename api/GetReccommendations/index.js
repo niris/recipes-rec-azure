@@ -13,7 +13,7 @@ module.exports = async function (context, req) {
   };
 };
 
-// Function to generate list of recommended recipes based on a list of ingredients
+// Generate list of recommended recipes based on a list of ingredients
 async function generateRecipe(ingredients) {
   console.log("try to connect to DB");
   try {
