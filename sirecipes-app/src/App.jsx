@@ -6,6 +6,7 @@ function App() {
   const [ingredients, setIngredients] = useState([]);
   const [result, setResult] = useState(null);
   const apiUrl = import.meta.env.VITE_API_URL;
+  console.log("API URL", apiUrl)
 
   function handleAddIngredient(event) {
     event.preventDefault();
