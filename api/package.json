@@ -4,10 +4,9 @@
   "description": "",
   "scripts": {
     "start": "func start",
-    "test": "jest"
+    "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "jest": "^29.5.0",
-    "mssql": "^9.1.1"
+    "mongoose": "^7.1.0"
   }
 }

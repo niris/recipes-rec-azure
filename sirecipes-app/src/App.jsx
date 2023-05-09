@@ -20,8 +20,9 @@ function App() {
   }
 
   function handleSearchRecipes() {
+    //console.log(FUNCTIONS_KEY)
     if (ingredients.length > 0) {
-      fetch("https://sirecipes-api.azurewebsites.net/api/GetReccommendations", {
+      fetch("http://localhost:7071/api/GetRecommandations", {
         method: "POST",
         body: JSON.stringify({
           ingredients,
