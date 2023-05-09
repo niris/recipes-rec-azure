@@ -17,6 +17,5 @@ module.exports = async function (context, req) {
 async function generateRecipe(ingredients) {
   await db.init();
   res = await db.findItems();
-
   return res;
 }

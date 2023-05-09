@@ -11,12 +11,17 @@ function App() {
     if (ingredientValue.trim() === "") {
       return;
     }
-    setIngredients(prevIngredients => [...prevIngredients, ingredientValue.trim()]);
+    setIngredients((prevIngredients) => [
+      ...prevIngredients,
+      ingredientValue.trim(),
+    ]);
     setIngredientValue("");
   }
 
   function handleRemoveIngredient(index) {
-    setIngredients(prevIngredients => prevIngredients.filter((_, i) => i !== index));
+    setIngredients((prevIngredients) =>
+      prevIngredients.filter((_, i) => i !== index)
+    );
   }
 
   function handleSearchRecipes() {
@@ -81,7 +86,13 @@ function App() {
         >
           Search
         </button>
-        <button type="button" onClick={() => setIngredients([])}>
+        <button
+          type="button"
+          onClick={() => {
+            setIngredients([]);
+            setResult([]);
+          }}
+        >
           Reset
         </button>
       </form>
