@@ -89,6 +89,7 @@ function App() {
           type="button"
           onClick={handleSearchRecipes}
           className="button primary"
+          disabled={ingredients.length === 0}
         >
           Search
         </button>
