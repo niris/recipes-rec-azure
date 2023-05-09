@@ -5,6 +5,7 @@ function App() {
   const [ingredientValue, setIngredientValue] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [result, setResult] = useState(null);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   function handleAddIngredient(event) {
     event.preventDefault();
@@ -27,7 +28,7 @@ function App() {
   function handleSearchRecipes() {
     //console.log(FUNCTIONS_KEY)
     if (ingredients.length > 0) {
-      fetch("http://localhost:7071/api/GetRecommandations", {
+      fetch(`${apiUrl}GetRecommandations`, {
         method: "POST",
         body: JSON.stringify({
           ingredients,
