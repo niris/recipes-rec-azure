@@ -76,8 +76,7 @@ async function findItemById(id) {
 
 async function findItems(query = {}) {
   try {
-    const sanitizedQuery = sanitizeInput(query);
-    const recipes = await RecipesModel.find(sanitizedQuery);
+    const recipes = await RecipesModel.find(query);
     console.log('Results:', recipes);
     return recipes;
   } catch (error) {
