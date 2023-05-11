@@ -1,5 +1,6 @@
 module.exports = async function (context, req) {
   context.log("Warm-up request received.");
+  
   // Simulate some processing time for warm-up
   await sleep(1000);
 
