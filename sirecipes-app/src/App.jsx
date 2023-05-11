@@ -1,15 +1,15 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./Nav";
 import FindRecipes from "./FindRecipes";
 import AddRecipes from "./AddRecipes";
 const apiUrl = import.meta.env.VITE_API_URL;
 
-useEffect(() => {
-  fetch(`${apiUrl}WarmUp`);
-}, []);
-
 function App() {
+  useEffect(() => {
+    fetch(`${apiUrl}WarmUp`);
+  }, []);
+
   return (
     <Router>
       <Nav />
@@ -22,5 +22,3 @@ function App() {
 }
 
 export default App;
-
-fetch(`${apiUrl}WarmUp`);
