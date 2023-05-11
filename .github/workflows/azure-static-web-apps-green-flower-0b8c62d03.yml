@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - mongo
+    paths: 'sirecipes-app/**'
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
