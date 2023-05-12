@@ -104,16 +104,16 @@ function FindRecipes() {
         </div>
       </form>
       {result && result.length > 0 && (
-        <div className="card result">
-          <header>
-            <h4>Recommended recipes :</h4>
-          </header>
-
-          <ul>
-            {result.map((item, index) => (
-              <li key={index}>{item.Name}</li>
-            ))}
-          </ul>
+        <div className="result">
+          <h4>Recommended Recipes:</h4>
+          {result.map((item, index) => (
+            <div className="card">
+              <header>
+                <h4>{item.Name}</h4>
+              </header>
+              {item.Description}
+            </div>
+          ))}
         </div>
       )}
     </div>

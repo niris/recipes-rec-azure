@@ -1,8 +1,15 @@
-.tag{border-radius: .5em;}
-
-.result{
-  margin-top:2em;
+.tag {
+  border-radius: 0.5em;
 }
-button{
+
+.result {
+  margin-top: 2em;
+}
+
+.card {
+  margin-top: 1.5em;
+}
+
+button {
   margin-right: 0.5em;
 }
