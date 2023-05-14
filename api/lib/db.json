@@ -1,0 +1,129 @@
+[
+    {
+      "Name": "Spaghetti Bolognese",
+      "Description": "Classic Italian pasta dish with a rich tomato and meat sauce.",
+      "Ingredients": ["Spaghetti", "Ground beef", "Tomatoes", "Onion", "Garlic", "Olive oil", "Herbs", "Parmesan cheese"]
+    },
+    {
+      "Name": "Chicken Tikka Masala",
+      "Description": "Creamy and flavorful Indian dish with grilled chicken in a spiced tomato sauce.",
+      "Ingredients": ["Chicken", "Yogurt", "Tomato sauce", "Onion", "Garlic", "Ginger", "Spices", "Cream"]
+    },
+    {
+      "Name": "Caesar Salad",
+      "Description": "Classic salad made with romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
+      "Ingredients": ["Romaine lettuce", "Croutons", "Parmesan cheese", "Caesar dressing", "Lemon juice", "Anchovies"]
+    },
+    {
+      "Name": "Chocolate Chip Cookies",
+      "Description": "Delicious homemade cookies with chocolate chips.",
+      "Ingredients": ["Flour", "Sugar", "Butter", "Chocolate chips", "Eggs", "Vanilla extract", "Baking soda", "Salt"]
+    },
+    {
+      "Name": "Beef Stir-Fry",
+      "Description": "Quick and easy stir-fry with tender beef and fresh vegetables.",
+      "Ingredients": ["Beef", "Bell peppers", "Broccoli", "Carrots", "Onion", "Garlic", "Soy sauce", "Sesame oil"]
+    },
+    {
+        "Name": "Margarita Pizza",
+        "Description": "Classic Italian pizza topped with tomato sauce, mozzarella cheese, and fresh basil.",
+        "Ingredients": ["Pizza dough", "Tomato sauce", "Mozzarella cheese", "Fresh basil", "Olive oil", "Salt"]
+      },
+      {
+        "Name": "Chicken Noodle Soup",
+        "Description": "Comforting soup with chicken, noodles, and vegetables in a flavorful broth.",
+        "Ingredients": ["Chicken broth", "Chicken breast", "Egg noodles", "Carrots", "Celery", "Onion", "Garlic", "Herbs"]
+      },
+      {
+        "Name": "Greek Salad",
+        "Description": "Refreshing salad with tomatoes, cucumbers, olives, feta cheese, and a tangy dressing.",
+        "Ingredients": ["Tomatoes", "Cucumbers", "Red onion", "Kalamata olives", "Feta cheese", "Olive oil", "Lemon juice", "Oregano"]
+      },
+      {
+        "Name": "Beef Tacos",
+        "Description": "Tasty Mexican street-style tacos with seasoned beef, salsa, and toppings.",
+        "Ingredients": ["Ground beef", "Tortillas", "Onion", "Garlic", "Chili powder", "Cumin", "Lettuce", "Tomatoes", "Cheese", "Sour cream"]
+      },
+      {
+        "Name": "Pasta Primavera",
+        "Description": "Light and colorful pasta dish with fresh vegetables and a creamy sauce.",
+        "Ingredients": ["Pasta", "Mixed vegetables", "Garlic", "Olive oil", "Cream", "Parmesan cheese", "Herbs"]
+      },
+      {
+        "Name": "Roasted Chicken",
+        "Description": "Juicy and tender roasted chicken with crispy skin.",
+        "Ingredients": ["Whole chicken", "Butter", "Garlic", "Lemon", "Herbs", "Salt", "Pepper"]
+      },
+      {
+        "Name": "Caprese Salad",
+        "Description": "Simple and refreshing salad with tomatoes, mozzarella cheese, and basil.",
+        "Ingredients": ["Tomatoes", "Fresh mozzarella", "Fresh basil", "Olive oil", "Balsamic vinegar", "Salt", "Pepper"]
+      },
+      {
+        "Name": "Chocolate Brownies",
+        "Description": "Rich and fudgy chocolate brownies that are perfect for chocolate lovers.",
+        "Ingredients": ["Butter", "Sugar", "Eggs", "Flour", "Cocoa powder", "Vanilla extract", "Salt", "Chocolate chips"]
+      },
+      {
+        "Name": "Vegetable Curry",
+        "Description": "Flavorful curry made with a variety of vegetables in a spiced sauce.",
+        "Ingredients": ["Mixed vegetables", "Coconut milk", "Curry paste", "Onion", "Garlic", "Ginger", "Spices", "Rice"]
+      },
+      {
+        "Name": "Strawberry Shortcake",
+        "Description": "Classic dessert with layers of sweet strawberries and fluffy shortcake.",
+        "Ingredients": ["Strawberries", "Shortcake biscuits", "Whipped cream", "Sugar", "Vanilla extract"]
+      },{
+        "Name": "Beef Stew",
+        "Description": "Hearty and comforting stew with tender beef, vegetables, and flavorful broth.",
+        "Ingredients": ["Beef chuck roast", "Potatoes", "Carrots", "Onion", "Garlic", "Beef broth", "Tomato paste", "Herbs"]
+      },
+      {
+        "Name": "Spinach and Feta Stuffed Chicken",
+        "Description": "Juicy chicken breasts stuffed with spinach, feta cheese, and herbs.",
+        "Ingredients": ["Chicken breasts", "Spinach", "Feta cheese", "Garlic", "Herbs", "Olive oil", "Salt", "Pepper"]
+      },
+      {
+        "Name": "Blueberry Pancakes",
+        "Description": "Fluffy pancakes filled with fresh blueberries and served with maple syrup.",
+        "Ingredients": ["Flour", "Milk", "Eggs", "Blueberries", "Sugar", "Baking powder", "Butter", "Maple syrup"]
+      },
+      {
+        "Name": "Teriyaki Salmon",
+        "Description": "Delicious glazed salmon fillets with a sweet and savory teriyaki sauce.",
+        "Ingredients": ["Salmon fillets", "Soy sauce", "Honey", "Ginger", "Garlic", "Sesame oil", "Green onions", "Rice"]
+      },
+      {
+        "Name": "Quinoa Salad",
+        "Description": "Healthy and colorful salad with quinoa, vegetables, and a tangy dressing.",
+        "Ingredients": ["Quinoa", "Cucumber", "Tomatoes", "Bell peppers", "Red onion", "Feta cheese", "Lemon juice", "Olive oil"]
+      },
+      {
+        "Name": "Beef and Broccoli Stir-Fry",
+        "Description": "Quick and flavorful stir-fry with tender beef and crisp broccoli in a savory sauce.",
+        "Ingredients": ["Beef sirloin", "Broccoli", "Soy sauce", "Oyster sauce", "Garlic", "Ginger", "Cornstarch", "Rice"]
+      },
+      {
+        "Name": "Tomato Basil Soup",
+        "Description": "Smooth and comforting tomato soup with fresh basil flavor.",
+        "Ingredients": ["Tomatoes", "Onion", "Garlic", "Vegetable broth", "Cream", "Fresh basil", "Olive oil", "Salt", "Pepper"]
+      },
+      {
+        "Name": "Lemon Herb Roasted Chicken",
+        "Description": "Juicy roasted chicken with a tangy lemon and herb marinade.",
+        "Ingredients": ["Whole chicken", "Lemon", "Garlic", "Herbs (such as rosemary, thyme, and parsley)", "Olive oil", "Salt", "Pepper"]
+      },
+      {
+        "Name": "Pesto Pasta",
+        "Description": "Delicious pasta dish tossed in a vibrant basil pesto sauce.",
+        "Ingredients": ["Pasta", "Fresh basil", "Parmesan cheese", "Pine nuts", "Garlic", "Olive oil", "Salt", "Pepper"]
+      },
+      {
+        "Name": "Berry Smoothie",
+        "Description": "Refreshing and nutritious smoothie made with mixed berries and yogurt.",
+        "Ingredients": ["Mixed berries (such as strawberries, blueberries, and raspberries)", "Yogurt", "Milk", "Honey", "Ice"]
+      }
+    
+
+  ]
+  

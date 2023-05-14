@@ -50,16 +50,11 @@ function sanitizeInput(input) {
 
 async function addItem(doc) {
   try {
-    const sanitizedDoc = sanitizeInput(doc);
-    const modelToInsert = new RecipesModel({
-      Name: sanitizedDoc.name,
-      Description: sanitizedDoc.description,
-      Ingredients: sanitizedDoc.ingredients
-    });
+    const modelToInsert = new RecipesModel(doc);
     const result = await modelToInsert.save();
     return result;
   } catch (error) {
-    console.error(`Error adding item to database: ${error.message}`);
+    console.error(`Error finding item by id: ${error.message}`);
     throw error;
   }
 }

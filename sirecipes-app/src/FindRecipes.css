@@ -6,10 +6,10 @@
   margin-top: 2em;
 }
 
-.card {
-  margin-top: 1.5em;
+.result > .card {
+  margin-top: 1em;
 }
 
-button {
-  margin-right: 0.5em;
+.button-container > button {
+  margin: 1em;
 }

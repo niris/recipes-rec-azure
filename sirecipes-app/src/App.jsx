@@ -6,10 +6,6 @@ import AddRecipes from "./AddRecipes";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 function App() {
-  useEffect(() => {
-    fetch(`${apiUrl}WarmUp`);
-  }, []);
-
   return (
     <Router>
       <Nav />
