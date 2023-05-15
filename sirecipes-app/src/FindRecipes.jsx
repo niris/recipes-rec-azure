@@ -14,6 +14,7 @@ function FindRecipes() {
       setIngredientOptions(JSON.parse(localStorage.ingredients));
       return;
     }
+    console.log("Try to get datalist from DB")
     fetch(`${apiUrl}/recipes`)
       .then((response) => response.json())
       .then((data) => {

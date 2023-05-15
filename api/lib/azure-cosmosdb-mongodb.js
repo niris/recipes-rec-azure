@@ -1,43 +1,47 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const RecipesSchema = new mongoose.Schema({
   Name: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   Description: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   Ingredients: {
     type: [String],
-    required: true
-  }
+    required: true,
+  },
 });
 
-const RecipesModel = mongoose.model('recipes', RecipesSchema, 'recipes');
+const RecipesModel = mongoose.model("recipes", RecipesSchema, "recipes");
 
 async function init() {
-  try {
-    await mongoose.connect(process.env.CosmosDbConnectionString, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
-    console.log('Connected to database successfully');
-  } catch (error) {
-    console.error(`Error connecting to database: ${error.message}`);
-    process.exit(1);
+  if (mongoose.connection.readyState === 0) {
+    try {
+      connection = await mongoose.connect(process.env.CosmosDbConnectionString, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      });
+      console.log("Connected to database successfully", connection.next);
+    } catch (error) {
+      console.error(`Error connecting to database: ${error.message}`);
+      process.exit(1);
+    }
+  } else {
+    console.log("Already connected to MongoDB");
   }
 }
 
 function sanitizeInput(input) {
-  if (typeof input === 'string') {
+  if (typeof input === "string") {
     return input.trim();
   } else if (Array.isArray(input)) {
     return input.map(sanitizeInput);
-  } else if (typeof input === 'object') {
+  } else if (typeof input === "object") {
     const sanitized = {};
     for (const [key, value] of Object.entries(input)) {
       sanitized[key] = sanitizeInput(value);
@@ -72,7 +76,7 @@ async function findItemById(id) {
 async function findItems(query = {}) {
   try {
     const recipes = await RecipesModel.find(query);
-    console.log('Results:', recipes);
+    console.log("Results:", recipes);
     return recipes;
   } catch (error) {
     console.error(`Error finding items: ${error.message}`);
@@ -95,5 +99,5 @@ module.exports = {
   addItem,
   findItemById,
   findItems,
-  deleteItemById
+  deleteItemById,
 };
