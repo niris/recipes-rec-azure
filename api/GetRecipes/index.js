@@ -1,3 +1,5 @@
+const db = require("../lib/azure-cosmosdb-mongodb");
+
 module.exports = async function (context, req) {
   try {
     const recipe = await db.findItems({});
